@@ -3,164 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRFM Injections | Soul Glow Med Spa Farmers Branch</title>
+    <title>PRFM Injections | Soul Glow Medspa Farmers Branch</title>
+    
+    <!-- CSS & Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        .gold-glow { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
-        .border-gold { border-color: #D4AF37; }
-        .text-gradient {
-            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        .bg-gold { background-color: #C5A059; }
+        .text-gold { color: #C5A059; }
+        .border-gold { border-color: #C5A059; }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #F1D38E 50%, #B38728 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .btn-gold {
-            background: linear-gradient(to right, #B38728, #D4AF37);
+            background: linear-gradient(135deg, #B38728 0%, #C5A059 100%);
             color: white;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            letter-spacing: 2px;
         }
-        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(179, 135, 40, 0.3); }
+        .btn-gold:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(179, 135, 40, 0.4);
+        }
+
+        /* Glassmorphism for sections */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; }
     </style>
 </head>
-<body class="bg-[#fafafa] text-slate-900 font-sans">
+<body class="bg-white text-black overflow-x-hidden">
 
-    <!-- Top Bar Offer -->
-    <div class="bg-black text-white text-center py-2 text-sm font-medium tracking-wide">
-        ✨ UNLOCK $50 OFF: <span class="text-amber-400">Join our rewards program today!</span>
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white text-center py-3 text-[10px] font-bold tracking-[0.3em] uppercase border-b border-gold/30">
+        ✨ Claim $50 Off Your First Treatment • <span class="text-gold underline underline-offset-4 uppercase">Join Rewards</span>
     </div>
 
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <!-- LOGO PLACEHOLDER -->
-                    <div class="flex flex-col">
-                        <span class="text-2xl font-serif font-bold tracking-widest text-slate-800 uppercase">Soul Glow</span>
-                        <span class="text-[10px] tracking-[0.3em] uppercase text-amber-600 -mt-1 font-bold">Med Spa & Aesthetics</span>
-                    </div>
-                </div>
-                <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
-                    <a href="#results" class="hover:text-amber-600 transition">Gallery</a>
-                    <a href="#about" class="hover:text-amber-600 transition">Our Team</a>
-                    <a href="#location" class="hover:text-amber-600 transition">Location</a>
-                </div>
-                <a href="YOUR_GHL_BOOKING_LINK_HERE" class="btn-gold px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                    Book Now
-                </a>
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-2xl font-bold tracking-[0.2em] uppercase leading-none">Soul Glow</span>
+                <span class="text-[9px] tracking-[0.4em] uppercase text-gold font-bold mt-1">Medspa & Aesthetics</span>
             </div>
+            <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-gold transition">The Matrix</a>
+                <a href="#results" class="hover:text-gold transition">Gallery</a>
+                <a href="#location" class="hover:text-gold transition">Location</a>
+            </div>
+            <a href="YOUR_GHL_LINK" class="btn-gold px-8 py-3 rounded-none text-[10px] font-bold uppercase">Book Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-20 pb-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="inline-block px-4 py-1 border border-amber-200 rounded-full text-amber-700 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                Accentuate Your Inner Glow
-            </span>
-            <h1 class="text-5xl md:text-7xl font-serif text-slate-900 leading-tight mb-8">
-                The <span class="text-gradient italic font-normal">Liquid Gold</span> <br>Facial Transformation
+    <header class="relative h-[90vh] flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
+            <span class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-6 block">Farmers Branch, Texas</span>
+            <h1 class="text-white text-6xl md:text-8xl font-serif mb-8 leading-tight">
+                Beauty, <br><span class="italic gold-gradient font-normal">Reinvented.</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-lg text-slate-500 mb-10 leading-relaxed italic">
-                Experience PRFM: The next generation of regenerative medicine for under-eye hollows, skin texture, and natural hair restoration.
+            <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed tracking-wide mb-12 font-light">
+                Introducing the PRFM Liquid Gold Treatment. Next-generation regenerative medicine 
+                for under-eye hollows and hair restoration, delivered with clinical expertise.
             </p>
-            <div class="flex justify-center gap-6">
-                <a href="YOUR_GHL_BOOKING_LINK_HERE" class="btn-gold px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl">
-                    Claim Your Consultation
-                </a>
-            </div>
+            <a href="YOUR_GHL_LINK" class="btn-gold px-12 py-5 inline-block text-xs font-bold uppercase tracking-[0.2em]">
+                Schedule Your Consultation
+            </a>
         </div>
     </header>
 
-    <!-- Before & After Gallery -->
-    <section id="results" class="py-24 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif mb-4 uppercase tracking-wider">Real Results</h2>
-                <div class="w-20 h-1 bg-amber-400 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- PHOTO BOX 1 -->
-                <div class="bg-white p-2 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="aspect-[4/3] bg-slate-200 rounded-xl overflow-hidden mb-4 relative">
-                         <span class="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 rounded">Under-Eye Treatment</span>
-                         <img src="YOUR_BEFORE_AFTER_PHOTO_1_URL" alt="PRFM Results" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest pb-2">3 Sessions of PRFM</p>
-                </div>
-                <!-- PHOTO BOX 2 -->
-                <div class="bg-white p-2 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="aspect-[4/3] bg-slate-200 rounded-xl overflow-hidden mb-4 relative">
-                         <span class="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 rounded">Hair Restoration</span>
-                         <img src="YOUR_BEFORE_AFTER_PHOTO_2_URL" alt="PRFM Results" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest pb-2">Full Growth Cycle</p>
-                </div>
-                <!-- PHOTO BOX 3 -->
-                <div class="bg-white p-2 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="aspect-[4/3] bg-slate-200 rounded-xl overflow-hidden mb-4 relative">
-                         <span class="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 rounded">Tear Troughs</span>
-                         <img src="YOUR_BEFORE_AFTER_PHOTO_3_URL" alt="PRFM Results" class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest pb-2">Natural Volume Restoration</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us / The Team -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 lg:flex items-center gap-16">
-            <div class="lg:w-1/2 mb-12 lg:mb-0">
+    <!-- The PRFM Difference -->
+    <section id="about" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
                 <div class="relative">
-                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-amber-100 rounded-3xl -z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800" alt="Med Spa Interior" class="rounded-3xl shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1579154235884-1ad22320b225?auto=format&fit=crop&q=80&w=800" class="relative z-10 shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 border-8 border-gold/10 -z-0"></div>
                 </div>
             </div>
-            <div class="lg:w-1/2">
-                <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Our Mission</span>
-                <h2 class="text-4xl font-serif mt-4 mb-6">Expertise Meets Artistry</h2>
-                <p class="text-slate-600 mb-6 leading-relaxed">
-                    Led by **Jordan Busansky** and **Ariadna Sanchez**, Soul Glow Med Spa is your premier destination for facial rejuvenation in North Dallas. 
-                    We believe beauty isn't one-size-fits-all. Our PRFM treatments are tailored to highlight your unique features in a luxurious, intimate environment.
+            <div data-aos="fade-left">
+                <span class="text-gold font-bold text-xs uppercase tracking-[0.3em] mb-4 block">The Science of PRFM</span>
+                <h2 class="text-4xl md:text-5xl font-serif mb-8">Clinical Artistry by <br>Ari Sanchez</h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Unlike standard PRP, our Platelet-Rich Fibrin Matrix (PRFM) creates a stable scaffold that stays exactly where it’s injected. 
+                    Clinical Provider **Ari Sanchez** utilizes this sustained-release technology to stimulate collagen for up to 7 days post-treatment.
                 </p>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fas fa-check-circle text-amber-500"></i> Board Certified Professionals</li>
-                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fas fa-check-circle text-amber-500"></i> Next-Gen Platelet-Rich Fibrin Matrix</li>
-                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fas fa-check-circle text-amber-500"></i> Luxurious Farmers Branch Studio</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location & Contact -->
-    <section id="location" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <i class="fas fa-location-dot text-amber-400 text-3xl mb-6"></i>
-            <h2 class="text-3xl font-serif mb-4 uppercase tracking-widest">Visit Soul Glow</h2>
-            <p class="text-slate-400 mb-10 max-w-lg mx-auto leading-relaxed">
-                8 Medical Parkway, Ste 302, Plaza 2<br>
-                Farmers Branch, TX 75234
-            </p>
-            <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                <div class="p-6 border border-slate-700 rounded-2xl">
-                    <p class="text-[10px] text-amber-500 uppercase font-bold tracking-widest mb-2">Call Us</p>
-                    <p class="font-bold">(214) 810-5905</p>
-                </div>
-                <div class="p-6 border border-slate-700 rounded-2xl">
-                    <p class="text-[10px] text-amber-500 uppercase font-bold tracking-widest mb-2">Email</p>
-                    <p class="font-bold">hello@soulglowmedspa.com</p>
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h4 class="font-bold text-xs uppercase tracking-widest mb-2">Targeted</h4>
+                        <p class="text-xs text-slate-500">Stays localized to treat deep hollows and thinning hair.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs uppercase tracking-widest mb-2">Pure</h4>
+                        <p class="text-xs text-slate-500">100% natural. No synthetic fillers. Zero downtime.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-white border-t border-slate-100 text-center">
-        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">© 2024 Soul Glow Med Spa | Farmers Branch</p>
+    <!-- Interactive Results -->
+    <section id="results" class="py-32 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-serif mb-20" data-aos="fade-up">The Transformation Gallery</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Result Item -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                        <img src="YOUR_IMAGE_URL" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                    </div>
+                    <h3 class="text-gold text-xs font-bold uppercase tracking-widest">Under-Eye Correction</h3>
+                </div>
+                <!-- Result Item -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                        <img src="YOUR_IMAGE_URL" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                    </div>
+                    <h3 class="text-gold text-xs font-bold uppercase tracking-widest">Hair Density Boost</h3>
+                </div>
+                <!-- Result Item -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                        <img src="YOUR_IMAGE_URL" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                    </div>
+                    <h3 class="text-gold text-xs font-bold uppercase tracking-widest">Nasolabial Folds</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section id="location" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-0 border border-slate-100 shadow-2xl rounded-3xl overflow-hidden">
+            <div class="p-16 bg-white">
+                <h2 class="text-4xl font-serif mb-6">Find Your Glow</h2>
+                <p class="text-slate-500 mb-10 text-sm tracking-wide">
+                    Located in the heart of Farmers Branch, our studio offers a private, luxurious experience.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <i class="fas fa-map-pin text-gold mt-1"></i>
+                        <p class="text-sm font-semibold">8 Medical Parkway, Ste 302, Plaza 2<br>Farmers Branch, TX 75234</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fas fa-phone text-gold mt-1"></i>
+                        <p class="text-sm font-semibold">(214) 810-5905</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/dir//8+Medical+Pkwy+STE+302,+Farmers+Branch,+TX+75234" target="_blank" class="mt-12 inline-block border-b-2 border-gold text-[10px] font-bold uppercase tracking-widest pb-1 hover:text-gold transition">Get Directions</a>
+            </div>
+            <div class="h-[500px] lg:h-auto min-h-[400px]">
+                <!-- Google Maps Iframe -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.650800366601!2d-96.8837336!3d32.9338029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2642d9392e21%3A0xc6659f8a379f8260!2s8%20Medical%20Pkwy%20STE%20302%2C%20Farmers%20Branch%2C%20TX%2075234!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                    class="w-full h-full grayscale border-none"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Footer -->
+    <footer class="bg-black text-white py-20 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-3xl font-serif mb-10">Experience Soul Glow Medspa</h2>
+            <a href="YOUR_GHL_LINK" class="btn-gold px-12 py-5 inline-block text-xs font-bold uppercase tracking-[0.2em]">Book My Appointment</a>
+            <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <span class="text-[10px] tracking-[0.3em] uppercase text-slate-500">© 2024 Soul Glow Medspa</span>
+                <div class="flex gap-8">
+                    <a href="#" class="text-slate-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
+
